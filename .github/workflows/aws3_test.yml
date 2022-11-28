@@ -30,11 +30,11 @@ jobs:
 
       - name: step2
         run: |
-          cd downloads
-          echo -e "{\n \"Data1\" : 1,\n \"Data2\" : 2,\n \"type\" : \"plus\"\n }"   > a.json
+            cd Python
+            python output.py
         
       - name: step3
         uses: actions/upload-artifact@v3
         with:
-          name: assets-for-download
-          path: downloads
+          name: output
+          path: /Python/output
