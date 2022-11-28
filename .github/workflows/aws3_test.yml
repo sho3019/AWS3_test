@@ -31,7 +31,7 @@ jobs:
       - name: step2
         run: |
           cd downloads
-          echo {\n "Data1" : 1\n "Data2" : 2\n "type" : plus\n }   > a.json
+          echo -e {\n "Data1" : 1\n "Data2" : 2\n "type" : plus\n }   > a.json
         
       - name: step3
         uses: actions/upload-artifact@v3
