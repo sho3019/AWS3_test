@@ -21,9 +21,6 @@ if (input.error_flag == 0):
     print("answer : " + str(ans))
 
 else:
-    print("Data1 : " + str(input.num1))
-    print("Data2 : " + str(input.num2))
-    print("type : " + input.operation)
     ans = "error: incorrect input"
     print(ans)
     
