@@ -30,7 +30,7 @@ jobs:
         with:
           python-version: 3.6
 
-      - name: Python
+      - name: Python3
         run: |
             cd Python
             python output.py
