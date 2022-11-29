@@ -20,7 +20,7 @@ def calc(operation, num1, num2):
         ans = float(ans)
         
     
-    ans = "answer : " + str(ans)
+    #ans = "answer : " + str(ans)
     
     return ans
 
