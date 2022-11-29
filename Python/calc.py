@@ -1,26 +1,40 @@
 import input
 
-ans = 0
+def calc(operation, num1, num2):
+    ans = 0
 
-if (input.error_flag == 0):
-    if(input.operation == "plus"):
-        ans = input.num1 + input.num2
+    if(operation == "plus"):
+        ans = num1 + num2
 
-    elif(input.operation == "minus"):
-        ans = input.num1 - input.num2
+    elif(operation == "minus"):
+        ans = num1 - num2
 
-    elif(input.operation == "cross"):
-        ans = input.num1 * input.num2
+    elif(operation == "cross"):
+        ans = num1 * num2
 
-    elif(input.operation == "devision"):
-        ans = input.num1 / input.num2
+    elif(operation == "devision"):
+        ans = num1 / num2
+    
+    else:
+        #print("error : incorrect operation")
+        pass
+    
+    ans = "answer : " + str(ans)
+    
+    return ans
 
-    print("Data1 : " + str(input.num1))
-    print("Data2 : " + str(input.num2))
-    print("type : " + input.operation)
-    print("answer : " + str(ans))
 
-else:
-    ans = "error: incorrect input"
-    print(ans)
+num1 = input.num1
+num2 = input.num2
+operation = input.operation
+ans = calc(operation, num1, num2)
+print(ans)
+
+#error_flag = 0
+#operation = "plus"
+#num1 = 1
+#num2 = 2
+
+#ans = calc(operation, num1, num2, erroflag)
+#print(ans)
     
