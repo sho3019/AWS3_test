@@ -16,8 +16,9 @@ def calc(operation, num1, num2):
         ans = num1 / num2
     
     else:
-        #print("error : incorrect operation")
-        pass
+        ans = "error : incorrect operation"
+        ans = float(ans)
+        
     
     ans = "answer : " + str(ans)
     

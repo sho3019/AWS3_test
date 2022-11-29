@@ -27,7 +27,7 @@ jobs:
   
   Python:
     runs-on: self-hosted
-
+  
     steps:
       - name: Set Python version
         uses: actions/setup-python@v3
@@ -43,10 +43,10 @@ jobs:
         if: failure()
         run: |
               echo "error : incorrect input"
-              
+
   Load:
     runs-on: self-hosted
-
+    needs: Python
     steps:
       - name: Load artifacts
         uses: actions/upload-artifact@v3
