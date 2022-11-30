@@ -25,9 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
   
-  Python:
+  python_execute:
     runs-on: self-hosted
-  
+    needs: build
+
     steps:
       - name: Set Python version
         uses: actions/setup-python@v3
@@ -44,10 +45,10 @@ jobs:
         run: |
               echo "error : incorrect input"
 
-  Load:
+  load_artifacts:
     runs-on: self-hosted
-    needs: Python
-    steps:
+    needs: python_execute
+    steps: 
       - name: Load artifacts
         uses: actions/upload-artifact@v3
         with:

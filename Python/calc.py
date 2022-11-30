@@ -1,4 +1,5 @@
 import input
+import sys
 
 def calc(operation, num1, num2):
     ans = 0
@@ -16,8 +17,9 @@ def calc(operation, num1, num2):
         ans = num1 / num2
     
     else:
-        ans = "error : incorrect operation"
-        ans = float(ans)
+        #ans = "error : incorrect operation"
+        #ans = float(ans)
+        sys.exit("error")
         
     
     #ans = "answer : " + str(ans)
